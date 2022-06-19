@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpert" content="width=device-width, initial-scale=1.0">
+    <title>python大数据就业岗位</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico"/>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+<div class="canvas" style="opacity: .3">
+    <iframe frameborder="0" src="/static/js/index.html" style="width: 100%; height: 110%"></iframe>
+</div>
+<!-- 头部盒子 -->
+<header>
+    <h1 align="center">Python大数据就业岗位可视化大屏</h1>
+    <div class="showTime">当前时间：2020年5月25日 10点10分10秒</div>
+    <script>
+        var t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date(); // 创建一个日期函数
+            var y = dt.getFullYear(); // 获取完整的年份
+            var mt = dt.getMonth() + 1; // 获取月份，默认从0开始计算，所以需要 +1
+            var day = dt.getDate(); // 获取天数
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML =
+                "当前时间：" + y + "年" + mt + "月" + day + "日  " +
+                h + "点" + m + "分" + s + "秒"; // 以指定的格式显示到页面中
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+    </script>
+</header>
+<!-- 页面主体部分 -->
+<section class="mainbox">
+    <div class="column">
+        <div class="panel bar">
+            <h2>大数据热门岗位</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+            <h2>热门岗位招聘量&nbsp;&nbsp;&nbsp;
+                <a href="javascript:;">2019</a>
+                <a href="javascript:;">2020</a>
+            </h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie">
+            <h2>python岗位热门发展方向</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="no">
+            <div class="no-hd">
+                <ul>
+                    <li>2261500</li>
+                    <li>2350600</li>
+                </ul>
+                <div class="no-hd-footer"></div>
+            </div>
+            <div class="no-bd">
+                <ul>
+                    <li>国内Python大数据岗位数</li>
+                    <li>国外Python大数据岗位数</li>
+                </ul>
+            </div>
+        </div>
+        <div class="map">
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <div class="chart"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel bar2">
+            <h2>python岗位就业人数</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line2">
+            <h2>岗位薪资待遇</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie2">
+            <h2>国内python岗位地域分布</h2>
+            <div class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+</section>
+<div class="back"></div>
+<script src="../static/js/flexible.js"></script>
+<script src="../static/js/echarts.js"></script>
+<script src="../static/js/jquery.js"></script>
+<script src="../static/js/china.js"></script>
+<script src="../static/js/index.js"></script>
+</body>
+</html>
